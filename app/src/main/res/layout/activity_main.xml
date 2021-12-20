@@ -58,9 +58,12 @@
         android:id="@+id/textWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="Word:"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSearch" />
 
@@ -69,7 +72,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textWord"
         app:layout_constraintTop_toTopOf="@+id/textWord" />
 
@@ -79,6 +83,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:text="Phonetic:"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/textEditWord"
         app:layout_constraintTop_toTopOf="@+id/textEditWord" />
 
@@ -87,7 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="TextView"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textPhonetic"
         app:layout_constraintTop_toTopOf="@+id/textPhonetic" />
 
@@ -98,9 +106,21 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textWord" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

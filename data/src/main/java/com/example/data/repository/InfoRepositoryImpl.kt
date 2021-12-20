@@ -8,8 +8,7 @@ import com.example.domain.models.SearchModel
 import com.example.domain.repository.InfoRepository
 
 class InfoRepositoryImpl(private val networkGetInfo: NetworkGetInfo):InfoRepository {
-    override fun getInfo(word: SearchModel): List<ResultModel> {
-        Log.d("MyLog", "InfoRepositoryImpl ")
-        return networkGetInfo.get(word)
+    override fun getInfo(word: SearchModel){
+        networkGetInfo.get(word)
     }
 }

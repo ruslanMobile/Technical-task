@@ -4,5 +4,5 @@ import com.example.domain.models.ResultModel
 import com.example.domain.models.SearchModel
 
 interface InfoRepository {
-    fun getInfo(word: SearchModel): List<ResultModel>
+    fun getInfo(word: SearchModel)
 }
